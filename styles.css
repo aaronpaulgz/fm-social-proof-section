@@ -1,0 +1,153 @@
+:root {
+  /* Colors */
+  /* ### Primary */
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+  /* ### Neutral */
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --Primary-Font: "Spartan";
+  --Primary-Font-Body: 1rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--Primary-Font);
+}
+
+html,
+body {
+  background-color: var(--White);
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Background */
+
+.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.bg-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.bg-mobile-pattern {
+  width: 100%;
+  position: absolute;
+}
+
+.bg-desktop-pattern {
+  display: none;
+}
+
+.pattern-mob-top {
+  top: -4rem;
+}
+
+.pattern-mob-bottom {
+  bottom: -12rem;
+}
+
+/* Social Proof */
+
+.sp__container {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  font-family: var(--Primary-Font);
+}
+
+.sp__container > .sp__description {
+  width: 100%;
+  padding: 0 0.8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sp__description > .sp__info {
+  text-align: center;
+}
+
+.sp__info h1 {
+  font-size: 2.2rem;
+  color: var(--Very-Dark-Magenta);
+  margin: 2rem 0 0 0;
+}
+
+.sp__info p {
+  font-size: var(--Primary-Font-Body);
+  color: var(--Very-Dark-Magenta);
+  margin: 1rem 0 0 0;
+  line-height: 1.6rem;
+  font-weight: 500;
+}
+
+.sp__ratings > .sp__ratingCard {
+  text-align: center;
+  background-color: var(--Light-Grayish-Magenta);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 0.6rem;
+  margin-top: 1rem;
+}
+
+.sp__rating figure {
+  display: flex;
+}
+
+.sp__ratingCard small {
+  width: 100%;
+  margin: 0.6rem 0 0 0;
+  font-weight: 700;
+  color: var(--Very-Dark-Magenta);
+  font-size: 0.9rem;
+}
+
+/* Attribution */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 375px) {
+}
+@media screen and (min-width: 920px) {
+  .bg-mobile-pattern {
+    display: none;
+  }
+
+  .bg-desktop-pattern {
+    display: block;
+    position: absolute;
+  }
+
+  .pattern-top {
+    top: -8rem;
+    left: 0;
+  }
+
+  .pattern-bottom {
+    bottom: -18rem;
+    right: 0;
+  }
+}
