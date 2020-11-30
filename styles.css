@@ -23,7 +23,7 @@
 html,
 body {
   background-color: var(--White);
-  overflow: hidden;
+  overflow-x: hidden;
   width: 100vw;
   height: 100vh;
 }
@@ -32,12 +32,13 @@ body {
 
 .bg {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   z-index: 1;
+  /* overflow: hidden; */
 }
 
 .bg-container {
@@ -66,6 +67,7 @@ body {
 /* Social Proof */
 
 .sp__container {
+  position: absolute;
   width: 100%;
   height: 100%;
   z-index: 2;
@@ -117,6 +119,53 @@ body {
   font-weight: 700;
   color: var(--Very-Dark-Magenta);
   font-size: 0.9rem;
+}
+
+/* Cards */
+
+.sp__cards {
+  width: 100%;
+  padding: 0 1rem;
+  margin: 0 0 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sp__card {
+  background-color: var(--Very-Dark-Magenta);
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.6rem;
+  padding: 2rem;
+  color: var(--White);
+  margin: 1rem 0 1rem 0;
+}
+
+.sp__card > .sp__cardIdentifier {
+  display: flex;
+}
+
+.sp__cardIdentifier img {
+  border-radius: 50%;
+  width: 4rem;
+}
+
+.sp__cardIdentifierInfo {
+  margin: 0 0 0 1rem;
+}
+
+.sp__cardIdentifierInfo p {
+  font-size: 1.1rem;
+}
+
+.sp__cardIdentifierInfo small {
+  color: var(--Soft-Pink);
+  font-weight: 700;
+}
+
+.sp__cardContent {
+  margin: 1rem 0 0 0;
+  font-size: 1rem;
 }
 
 /* Attribution */
