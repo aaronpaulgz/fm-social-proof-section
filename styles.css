@@ -38,7 +38,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   z-index: 1;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .bg-container {
@@ -69,6 +69,7 @@ body {
 .sp__container {
   position: absolute;
   width: 100%;
+  overflow-x: hidden;
   height: 100%;
   z-index: 2;
   font-family: var(--Primary-Font);
@@ -125,7 +126,7 @@ body {
 
 .sp__cards {
   width: 100%;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   margin: 0 0 0 0;
   display: flex;
   flex-direction: column;
@@ -152,6 +153,9 @@ body {
 
 .sp__cardIdentifierInfo {
   margin: 0 0 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .sp__cardIdentifierInfo p {
@@ -160,6 +164,7 @@ body {
 
 .sp__cardIdentifierInfo small {
   color: var(--Soft-Pink);
+  padding: 0.2rem;
   font-weight: 700;
 }
 
